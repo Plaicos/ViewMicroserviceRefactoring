@@ -1,5 +1,5 @@
 var IITemplate = require("./IITemplate")
 
-module.exports = class IIPage extends IITemplate {
+module.exports = class IIComponent extends IITemplate{
     static IsProtected = false;
 }

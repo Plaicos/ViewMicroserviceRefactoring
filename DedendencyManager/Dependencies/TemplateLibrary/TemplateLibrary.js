@@ -7,13 +7,49 @@ module.exports = class TemplateLibrary extends IIDependency {
     static LibraryMapper = require("./LibraryMapper/LibraryMapper")
     static Models = require("./Models/Models")
 
-
     static InitializeAsync() {
+        try {
+            this.PvdMapLibraries();
+            this.PvdInitializeLibraries();
+            this.PvdBuildAndSetLibraries();
+            return
+        }
+        catch (erro) {
+            throw erro;
+        }
+    }
+
+    static PvdMapLibraries() {
         try {
             this.LibraryMapper.MapLibraries();
             this.TemplateLibraries = this.LibraryMapper.ExportLibraries();
-            console.log(this.TemplateLibraries)
-            return
+        }
+        catch (erro) {
+            throw erro;
+        }
+    }
+
+    static PvdBuildAndSetLibraries() {
+        var libraries = new Object();
+        try {
+            for (let library of this.TemplateLibraries) {
+                libraries[`${library.Name}`] = library
+            }
+            this.TemplateLibraries = libraries;
+            return;
+        }
+        catch (erro) {
+            throw erro;
+        }
+    }
+
+    static PvdInitializeLibraries() {
+        this
+        try {
+            for (let library of this.TemplateLibraries) {
+                library.Initialize();
+            }
+            return;
         }
         catch (erro) {
             throw erro;
@@ -48,12 +84,18 @@ module.exports = class TemplateLibrary extends IIDependency {
 
     async GetTemplate(selector) {
         try {
+            let a = {
+                Library: "Public",
+                Subject: "Pages",
+                Name: "Home"
+            }
             TemplateLibrary.PvdValidateSelector(selector);
-            
+            return
         }
         catch (erro) {
             throw erro;
         }
     }
 
+    async RenderWithData(data)
 }

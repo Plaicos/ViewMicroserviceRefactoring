@@ -13,7 +13,7 @@ module.exports = class LibrariesMapper {
             for (let file of files) {
                 let isJsFile = this.PvdIsJsFile(file)
                 let path = `${this.PvdPath}/${file}`
-
+                
                 if (isJsFile) {
                     file = this.PvdReadLibrary(path);
                     let isLibrary = file.prototype instanceof IILibrary;

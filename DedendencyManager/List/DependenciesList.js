@@ -8,6 +8,10 @@ module.exports = [
         Implementation: require("../Dependencies/Base64/Base64")
     },
     {
+        Name: "TemplateEngine",
+        Implementation: require("../Dependencies/TemplateEngine/TemplateEngine")
+    },
+    {
         Name: "TemplateLibrary",
         Implementation: require("../Dependencies/TemplateLibrary/TemplateLibrary")
     }

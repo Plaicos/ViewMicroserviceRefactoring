@@ -1,3 +1,3 @@
 module.exports = {
-    Header: require("./public_header.marko")
+    Header: require("./HeaderComponent")
 }
