@@ -5,6 +5,10 @@ var base64 = require("nodejs-base64")
 module.exports = class Base64 extends IIDependency {
     static AsyncInitMustBeCalled = false;
 
+    constructor(){
+        super();
+    }
+
     Encode(string) {
         try {
             return base64.base64encode(string);

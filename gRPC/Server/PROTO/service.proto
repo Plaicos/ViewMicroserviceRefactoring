@@ -2,7 +2,7 @@ syntax = "proto3";
 package ViewPackage;
 
 service View {
-    rpc get_template (getTemplate) returns (Template);
+    rpc GetTemplate (getTemplate) returns (Template);
     rpc get_public_static_file (getPublicStatic) returns (stream buffer);
 } 
 

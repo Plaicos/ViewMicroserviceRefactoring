@@ -1,3 +1,3 @@
 module.exports = {
-    TemplateSelector: require("./TemplateSelector")
+    GrpcRequest: require("./GrpcRequest")
 }

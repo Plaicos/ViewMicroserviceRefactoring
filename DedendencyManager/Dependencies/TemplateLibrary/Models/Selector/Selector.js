@@ -1,5 +1,5 @@
 module.exports = class Selector {
-    Library;
-    Subject;
-    Element;
+    Library = "";
+    Subject = "";
+    Element = "";
 }

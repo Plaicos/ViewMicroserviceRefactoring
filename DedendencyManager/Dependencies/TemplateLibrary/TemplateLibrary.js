@@ -1,5 +1,5 @@
 var IIDependency = require("../../InhertedInterface/Dependency");
-
+console.log("TemplateLibrary File Log")
 
 module.exports = class TemplateLibrary extends IIDependency {
     static AsyncInitMustBeCalled = true;
@@ -7,7 +7,7 @@ module.exports = class TemplateLibrary extends IIDependency {
     static LibraryMapper = require("./LibraryMapper/LibraryMapper")
     static Models = require("./Models/Models")
 
-    static InitializeAsync() {
+    static async InitializeAsync() {
         try {
             this.PvdMapLibraries();
             this.PvdInitializeLibraries();
@@ -59,21 +59,17 @@ module.exports = class TemplateLibrary extends IIDependency {
     static PvdValidateSelector(selector) {
         try {
             if (!selector instanceof this.Models.Selector) {
-                return reject("Library find selector must be a valid selector object")
+                throw Error("Library find selector must be a valid selector object")
             }
 
-            if (!selector.lib || !selector.subject || !selector.name) {
-                return reject("Selector object is invalid")
+            if (!this.TemplateLibraries[selector.Library]) {
+                throw Error(`Library '${selector.Library}' does not exist`)
             }
-
-            if (!libs[selector.lib]) {
-                return reject(`Library '${selector.lib}' does not exist`)
+            if (!this.TemplateLibraries[selector.Library][selector.Subject]) {
+                throw Error(`Subject '${selector.Subject}' does not exist`)
             }
-            if (!libs[selector.lib][selector.subject]) {
-                return reject(`Subject '${selector.subject}' does not exist`)
-            }
-            if (!libs[selector.lib][selector.subject][selector.name]) {
-                return reject(`Element '${selector.name}' does not exist`)
+            if (!this.TemplateLibraries[selector.Library][selector.Subject][selector.Element]) {
+                throw Error(`Element '${selector.Element}' does not exist`)
             }
             return;
         }
@@ -81,21 +77,18 @@ module.exports = class TemplateLibrary extends IIDependency {
             throw erro;
         }
     }
-
+    constructor() {
+        super()
+        this.GetTemplate = this.GetTemplate;
+    }
     async GetTemplate(selector) {
         try {
-            let a = {
-                Library: "Public",
-                Subject: "Pages",
-                Name: "Home"
-            }
             TemplateLibrary.PvdValidateSelector(selector);
-            return
+            return TemplateLibrary.TemplateLibraries[selector.Library][selector.Subject][selector.Element];
         }
         catch (erro) {
             throw erro;
         }
     }
-
-    async RenderWithData(data)
+    Models = TemplateLibrary.Models;
 }

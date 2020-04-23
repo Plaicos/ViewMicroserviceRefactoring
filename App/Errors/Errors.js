@@ -1,3 +1,7 @@
-module.exports = {
-    WrongType: require("./WrongTypeError")
+module.exports = class {
+    static WrongType = require("./WrongTypeError")
+
+    static GetLocalStack(){
+        
+    }
 }

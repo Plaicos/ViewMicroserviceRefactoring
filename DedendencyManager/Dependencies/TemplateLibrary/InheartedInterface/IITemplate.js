@@ -1,4 +1,6 @@
-module.exports = class IITemplate {
+var App = require("../../../../Application")
+
+module.exports = class IITemplate extends App.Models.Template {
     static MarkoTemplate;
     static Render(data) {
         try {

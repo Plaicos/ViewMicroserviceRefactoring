@@ -7,21 +7,23 @@ module.exports = class Application {
 
     static Entities = require("./App/Entities/Entities");
 
-    static UseCases = require("./App/UseCases/UseCases");
-
     static RootPath = __dirname;
 
     static Events = require("./App/Events/Events");
 
     static Models = require("./App/Models/Models");
 
-    static Errors = require("./App/Errors/Errors")
+    static Errors = require("./App/Errors/Errors");
 
-    static Adapters = require("./App/Adapters/Adapters")
+    static Converters;
+
+    static UseCases;
 
     static async Initialize() {
-        //Run this before using any dependency managed by the DependencyManager
+        //The order matters
         Application.Dependencies = await DependencyManager.InitializeAndExportAsync();
-        Application.Events.InitializeStaticProps();
+
+        Application.Converters = require("./App/Converters/Converteres");
+        Application.UseCases = require("./App/UseCases/UseCases");
     }
 }

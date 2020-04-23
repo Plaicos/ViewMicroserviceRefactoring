@@ -1,9 +1,9 @@
 var App = require("../../Application")
-
-module.exports = class TemplateSelectorAdapter {
+console.log("Adapter File Log")
+module.exports = class TemplateSelectorConverter {
     static PvdValidateSelector(selector) {
         try {
-            if (!selector instanceof App.Models.Request.TemplateSelector()) {
+            if (!selector instanceof App.Models.TemplateSelector) {
                 let stack = Error().stack
                 let message = "GetTemplate() Wrong Input Type"
                 throw Error(new App.Errors.WrongType({ stack, message }))
@@ -16,7 +16,7 @@ module.exports = class TemplateSelectorAdapter {
 
     static PvdConvertToLibrarySelector(selector) {
         try {
-            let librarySelector = new App.Dependencies.TemplateLibrary.Models.Selector();
+            let librarySelector = new App.Models.Template;
             librarySelector.Library = selector.Library;
             librarySelector.Subject = selector.Subject;
             librarySelector.Element = selector.Name;
