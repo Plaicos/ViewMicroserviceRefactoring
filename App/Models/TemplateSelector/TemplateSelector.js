@@ -1,10 +1,10 @@
 module.exports = class TemplateSelector {
     Library;
     Subject;
-    Name;
+    Element;
     constructor() {
         this.Library = "To Overide";
         this.Subject = "To Overide";
-        this.Name = "To Overide";
+        this.Element = "To Overide";
     }
 }

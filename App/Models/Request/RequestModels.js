@@ -1,3 +1,3 @@
 module.exports = {
-    GrpcRequest: require("./GrpcRequest")
+    GrpcRenderRequest: require("./GrpcRenderRequest")
 }

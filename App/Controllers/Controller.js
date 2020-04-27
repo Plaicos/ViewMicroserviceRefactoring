@@ -7,6 +7,8 @@ module.exports = class Controller {
             let selector = App.Converters.GrpcRequest.ToTemplateSelector(grpcRequest);
             let renderData = App.Converters.GrpcRequest.ToRenderData(grpcRequest);
             let templateRenderOutput = await UseCaseOperator.RenderWithData(selector, renderData);
+            let grpcResponse = App.Converters.TemplateRenderOutput.ToGrpcRenderResponse(templateRenderOutput);
+            return grpcResponse;
         }
         catch (erro) {
             throw erro;

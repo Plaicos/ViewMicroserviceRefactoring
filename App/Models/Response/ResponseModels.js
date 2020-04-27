@@ -1,3 +1,3 @@
 module.exports = {
-    TemplateRenderOutput: require("./TemplateRenderOutput")
+    GrpcRender: require("./GrpcRenderResponse")
 }

@@ -1,4 +1,5 @@
 module.exports = {
     TemplateSelector: require("./TemplateSelectorConverter"),
-    GrpcRequest: require("./GrpcRequestConverter")
+    GrpcRequest: require("./GrpcRequestConverter"),
+    TemplateRenderOutput: require("./TemplateRenderOutputConverter")
 }

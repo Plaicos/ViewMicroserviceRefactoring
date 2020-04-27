@@ -1,4 +1,4 @@
-var DependencyManager = require("./DedendencyManager/DependencyManager");
+var DependencyManager = require("./DependencyManager/DependencyManager");
 
 module.exports = class Application {
     static Dependencies;

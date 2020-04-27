@@ -1,11 +1,11 @@
-var Session = require("./Session/Session")
-var Params = require("./Params/Params")
+var Session = require("../Session/Session")
 
 module.exports = class RenderData {
     Session;
     Params;
+    Templates;
     constructor() {
         this.Session = new Session();
-        this.Params = new Params();
+        this.Params = null;
     }
 }
