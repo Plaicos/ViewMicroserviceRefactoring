@@ -1,6 +1,6 @@
 module.exports = class GrpcRenderResponse {
-    Html;
+    html;
     constructor(html) {
-        this.Html = html;
+        this.html = html;
     }
 }

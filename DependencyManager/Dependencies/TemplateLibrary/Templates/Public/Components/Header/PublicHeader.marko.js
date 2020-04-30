@@ -2,7 +2,7 @@
 "use strict";
 
 var marko_template = module.exports = require("marko/src/html").t(__filename),
-    marko_componentType = "/grpc-microservice$1.0.0/DedendencyManager/Dependencies/TemplateLibrary/Templates/Public/Components/Header/PublicHeader.marko",
+    marko_componentType = "/grpc-microservice$1.0.0/DependencyManager/Dependencies/TemplateLibrary/Templates/Public/Components/Header/PublicHeader.marko",
     marko_renderer = require("marko/src/runtime/components/renderer");
 
 function render(input, out, __component, component, state) {
@@ -17,5 +17,5 @@ marko_template._ = marko_renderer(render, {
   });
 
 marko_template.meta = {
-    id: "/grpc-microservice$1.0.0/DedendencyManager/Dependencies/TemplateLibrary/Templates/Public/Components/Header/PublicHeader.marko"
+    id: "/grpc-microservice$1.0.0/DependencyManager/Dependencies/TemplateLibrary/Templates/Public/Components/Header/PublicHeader.marko"
   };

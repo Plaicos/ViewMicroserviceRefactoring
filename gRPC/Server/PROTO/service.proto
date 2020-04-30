@@ -32,7 +32,7 @@ message selector {
 }
 
 message template {
-    string Html = 1;
+    string html = 1;
 }
 
 message responseStatus {

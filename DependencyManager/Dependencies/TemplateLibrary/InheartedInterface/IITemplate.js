@@ -1,10 +1,12 @@
-var App = require("../../../../Application")
+var App = require("../../../../Application");
+var fs = require("fs");
 
 module.exports = class IITemplate extends App.Models.Template {
-    static MarkoTemplate;
+    static TemplatesPastePath = require("../Templates/path");
+    static TemplateFile;
     static Render(data) {
         try {
-            return this.MarkoTemplate.renderSync(data);
+            return fs.readFileSync(this.TemplateFile);
         }
         catch (erro) {
             throw erro;

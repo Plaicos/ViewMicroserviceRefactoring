@@ -1,0 +1,191 @@
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about" style="margin-top: 8%;">
+        <div class="container">
+
+            <div class="row justify-content-between">
+                <div class="col-md-12 pt-5 pt-lg-0">
+                    <h3 data-aos="fade-up">Cadastro de Fornecedores
+                    </h3>
+                    <hr>
+                    <br>
+
+                    <!-- Text input-->
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-6 control-label titulo" for="Nome">Razão social</label>
+                            <div>
+                                <input placeholder="" class="form-control input-md" required="" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-6 control-label titulo" for="Nome">Nome Fantasia</label>
+                            <div>
+                                <input placeholder="" class="form-control input-md" required="" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label titulo" for="Nome">Inscrição estadual </label>
+                        <div>
+                            <input placeholder="" class="form-control input-md" required="" type="text">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label titulo" for="Nome">Endereço </label>
+                        <div>
+                            <input placeholder="" class="form-control input-md" required="" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6  form-group">
+                            <label class="col-md-6 control-label titulo" for="Nome">Porte da empresa</label>
+                            <div class="row" style="margin-left: 5px;">
+                                <div class="col-md-3 form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="Porte" id="Pequena"
+                                        value="Pequena">
+                                    <label class="form-check-label" for="Pequena">Pequena</label>
+                                </div>
+
+                                <div class="col-md-3 form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="Porte" id="Media" value="Media">
+                                    <label class="form-check-label" for="Media">Média</label>
+                                </div>
+                                <div class="col-md-3 form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="Porte" id="Grande"
+                                        value="Grande">
+                                    <label class="form-check-label" for="Grande">Grande</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6  form-group">
+                            <label class="col-md-6 control-label titulo" for="Nome">Valor mínimo de vendas </label>
+                            <div>
+                                <input placeholder="R$" class="form-control input-md" required="" type="number" min="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-2 control-label titulo" for="Nome">CNPJ </label>
+                            <div>
+                                <input placeholder="" class="form-control input-md" required="" type="number" min="0">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-6 control-label titulo" for="Nome">Categoria do fornecedor</label>
+                            <div class="row" style="margin-left: 5px;">
+                                <div class="col-md-3 form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="Categoria" id="fabricante"
+                                        value="Fabricante">
+                                    <label class="form-check-label" for="fabricante">Fabricante</label>
+                                </div>
+
+                                <div class="col-md-3 form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="Categoria" id="distribuidor"
+                                        value="Distribuidor">
+                                    <label class="form-check-label" for="distribuidor">Distribuidor</label>
+                                </div>
+                                <div class="col-md-3 form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="Categoria" id="ambos"
+                                        value="ambos">
+                                    <label class="form-check-label" for="ambos">Ambos</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <label style="margin-left: 15px; margin-top: 15px;" class="titulo">AFe (Certificado de
+                            autorização de
+                            funcionamento) </label>
+                        <div class='input-wrapper'>
+                            <label for='input-afe'>
+                                Selecionar um arquivo
+                            </label>
+                            <input id='input-afe' type='file' value='' />
+                            <span id='file-afe'></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-6 control-label titulo">PIS (%)</label>
+                            <div>
+                                <input placeholder="" class="form-control input-md" required="" type="number">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-6 control-label titulo">COFINS (%)</label>
+                            <div>
+                                <input placeholder="" class="form-control input-md" required="" type="number">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="afe" style="margin-left: 15px; margin-top: 15px;" class="titulo">Certificações
+                            ISO</label>
+                        <div class='input-wrapper'>
+                            <label for='input-iso'>
+                                Selecionar um arquivo
+                            </label>
+                            <input id='input-iso' type='file' value='' />
+                            <span id='file-iso'></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-6 control-label titulo">ICMS (%)</label>
+                            <div>
+                                <input placeholder="" class="form-control input-md" required="" type="number">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label class="control-label titulo">E-mail para envio de notas fiscais</label>
+                            <div>
+                                <input placeholder="" class="form-control input-md" required="" type="email">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label titulo">E-mail para solicitação de cotação e contato</label>
+                        <div>
+                            <input placeholder="" class="form-control input-md" required="" type="email">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label style="margin-left: 15px; margin-top: 15px;" class="titulo">Outras ertificações</label>
+                        <div class='input-wrapper'>
+                            <label for='input-outras'>
+                                Selecionar um arquivo
+                            </label>
+                            <input id='input-outras' type='file' value='' />
+                            <span id='file-outras'></span>
+                        </div>
+                    </div>
+                    <ul style="list-style-type: none;  padding: 0; margin: 0px;">
+                        <li class="btnSubmitcad"><a href="homeCad.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+    </section><!-- End About Section -->
+
+</main><!-- End #main -->

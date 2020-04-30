@@ -11,10 +11,10 @@
     </div>
     <nav class="nav-menu d-none d-lg-block">
       <ul>
-        <li class="active">
+        <li :class="{ active: session.currentPage === 'Home'}">
           <a href="#header">Home</a>
         </li>
-        <li>
+        <li :class="{ active: session.currentPage === 'Marketplace'}">
           <a href="#about">Marketplace</a>
         </li>
         <li>
@@ -26,7 +26,7 @@
         <li>
           <a href="#contact">Contato</a>
         </li>
-        <li class="drop-down">
+        <li v-if="session.isLogged === true" class="drop-down">
           <a href="">Conta</a>
           <ul>
             <li>
@@ -57,8 +57,8 @@
             </li>
           </ul>
         </li>
-        <li class="get-started">
-          <a href="/log-in">Login</a>
+        <li v-if="!session.isLogged" class="get-started">
+          <a href="/sign-in">Login</a>
         </li>
       </ul>
     </nav>

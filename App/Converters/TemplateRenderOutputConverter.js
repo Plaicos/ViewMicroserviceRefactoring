@@ -5,7 +5,7 @@ module.exports = class TemplateRenderOutputConverter {
         let grpcRenderResponse = new App.Models.Response.GrpcRender();
         try {
             this.PvdValidateRenderOutput();
-            grpcRenderResponse.Html = renderOutput.RenderedTemplateString;
+            grpcRenderResponse.html = renderOutput.RenderedTemplateString;
             return grpcRenderResponse;
         }
         catch (erro) {
