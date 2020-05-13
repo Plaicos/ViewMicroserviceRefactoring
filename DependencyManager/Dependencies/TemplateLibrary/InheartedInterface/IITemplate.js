@@ -3,6 +3,7 @@ var fs = require("fs");
 
 module.exports = class IITemplate extends App.Models.Template {
     static TemplatesPastePath = require("../Templates/path");
+    static PathSeparator = process.env.pathSeparator; 
     static TemplateFile;
     static Render(data) {
         try {

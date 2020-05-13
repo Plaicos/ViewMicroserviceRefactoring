@@ -19,7 +19,11 @@ module.exports = class Application {
 
     static UseCases;
 
+    static Env = require("./App/Env/Env");
+
     static async Initialize() {
+        //there's a todo here
+        Application.Env.InitializeVariables();
         //The order matters
         Application.Dependencies = await DependencyManager.InitializeAndExportAsync();
 
