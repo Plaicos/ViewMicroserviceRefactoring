@@ -10,6 +10,18 @@ module.exports = class gRPCServcieImplementation {
             callback(null, grpcResponse);
         }
         catch (erro) {
+            this.HandleError(callback, erro);
+        }
+    }
+
+    HandleError(callback, error) {
+        try {
+            //console.log(error)
+            return callback({
+                message: error.message
+            })
+        }
+        catch (erro) {
             throw erro;
         }
     }
