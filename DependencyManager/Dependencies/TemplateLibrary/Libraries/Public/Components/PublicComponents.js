@@ -1,5 +1,5 @@
 module.exports = {
-    'vheader': require("./HeaderComponent"),
+    'vheader': require("./Header/HeaderComponent"),
     notification: require("./Notification/NotificationComponent"),
     'sign-up-form': require("./SignUpForm/SignUpForm")
 }
