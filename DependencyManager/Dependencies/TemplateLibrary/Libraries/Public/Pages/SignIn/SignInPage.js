@@ -1,5 +1,6 @@
-var PublicPage = require("../PublicPage")
+var PublicPage = require("../PublicPage");
+var path = require("path");
 
 module.exports = class SignInPage extends PublicPage {
-    static TemplateFile = this.TemplatesPastePath + "\\Public\\Pages\\SignIn\\sign-in.html";
+    static TemplateFile = path.normalize(this.TemplatesPastePath + "/Public/Pages/SignIn/sign-in.html");
 }
