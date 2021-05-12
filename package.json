@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@grpc/proto-loader": "^0.5.4",
-    "grpc": "^1.24.2",
+    "grpc": "^1.24.9",
     "marko": "^4.21.1",
     "mongodb": "^3.5.6",
     "nodejs-base64": "^1.0.3"
